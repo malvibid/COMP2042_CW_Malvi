@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="404.5833333333333" y="310.0">p4_group_8_repo.Frog</node>
+    <node x="376.5" y="200.0">p4_group_8_repo.End</node>
+    <node x="371.4916387959868" y="430.0">p4_group_8_repo.Main</node>
+    <node x="618.3888888888889" y="200.0">p4_group_8_repo.Vehicle</node>
+    <node x="442.3888888888889" y="0.0">p4_group_8_repo.World</node>
+    <node x="0.0" y="310.0">p4_group_8_repo.MyStage</node>
+    <node x="124.0" y="310.0">p4_group_8_repo.BackgroundImage</node>
+    <node x="464.3888888888889" y="80.0">p4_group_8_repo.Actor</node>
+    <node x="284.5" y="200.0">p4_group_8_repo.Log</node>
+    <node x="478.3888888888889" y="200.0">p4_group_8_repo.WetTurtle</node>
+    <node x="742.3888888888889" y="200.0">p4_group_8_repo.Turtle</node>
+    <node x="858.3888888888889" y="200.0">p4_group_8_repo.Digit</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.End">
+      <point x="-26.66666666666663" y="-15.0" />
+      <point x="417.9166666666667" y="270.0" />
+      <point x="403.5" y="270.0" />
+      <point x="-9.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Actor" target="p4_group_8_repo.World">
+      <point x="-22.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Vehicle">
+      <point x="23.333333333333314" y="-15.0" />
+      <point x="434.82497212932003" y="390.0" />
+      <point x="696.3888888888889" y="390.0" />
+      <point x="26.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.MyStage">
+      <point x="-36.666666666666686" y="-15.0" />
+      <point x="374.82497212932003" y="410.0" />
+      <point x="26.0" y="410.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.WetTurtle" target="p4_group_8_repo.Actor">
+      <point x="30.0" y="-15.0" />
+      <point x="568.3888888888889" y="180.0" />
+      <point x="515.1581196581196" y="180.0" />
+      <point x="6.769230769230774" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.BackgroundImage" target="p4_group_8_repo.Actor">
+      <point x="0.0" y="-15.0" />
+      <point x="208.0" y="130.0" />
+      <point x="467.77350427350433" y="130.0" />
+      <point x="-40.615384615384585" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.End">
+      <point x="-3.3333333333333712" y="-15.0" />
+      <point x="408.1583054626534" y="360.0" />
+      <point x="370.9216833890748" y="360.0" />
+      <point x="370.9216833890748" y="290.0" />
+      <point x="385.5" y="290.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.World" target="p4_group_8_repo.Actor">
+      <point x="29.333333333333314" y="15.0" />
+      <point x="515.7222222222222" y="55.0" />
+      <point x="530.3888888888889" y="55.0" />
+      <point x="22.0" y="-15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.MyStage" target="p4_group_8_repo.World">
+      <point x="0.0" y="-15.0" />
+      <point x="52.0" y="55.0" />
+      <point x="457.0555555555556" y="55.0" />
+      <point x="-29.333333333333314" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Digit" target="p4_group_8_repo.Actor">
+      <point x="0.0" y="-15.0" />
+      <point x="902.3888888888889" y="130.0" />
+      <point x="549.0042735042736" y="130.0" />
+      <point x="40.61538461538464" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Digit">
+      <point x="36.666666666666686" y="-15.0" />
+      <point x="448.1583054626534" y="410.0" />
+      <point x="902.3888888888889" y="410.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.WetTurtle">
+      <point x="16.666666666666686" y="-15.0" />
+      <point x="428.1583054626534" y="380.0" />
+      <point x="568.3888888888889" y="380.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Turtle">
+      <point x="35.55555555555554" y="-15.0" />
+      <point x="480.13888888888886" y="290.0" />
+      <point x="766.3888888888889" y="290.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Log" target="p4_group_8_repo.Actor">
+      <point x="18.0" y="-15.0" />
+      <point x="338.5" y="150.0" />
+      <point x="481.3119658119658" y="150.0" />
+      <point x="-27.076923076923094" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Vehicle">
+      <point x="26.666666666666686" y="-15.0" />
+      <point x="471.25" y="280.0" />
+      <point x="644.3888888888889" y="280.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.End" target="p4_group_8_repo.Actor">
+      <point x="0.0" y="-15.0" />
+      <point x="412.5" y="160.0" />
+      <point x="488.0811965811966" y="160.0" />
+      <point x="-20.30769230769232" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Log">
+      <point x="-35.55555555555554" y="-15.0" />
+      <point x="409.02777777777777" y="280.0" />
+      <point x="338.5" y="280.0" />
+      <point x="18.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Actor">
+      <point x="0.0" y="-15.0" />
+      <point x="444.5833333333333" y="250.0" />
+      <point x="459.0" y="250.0" />
+      <point x="459.0" y="170.0" />
+      <point x="494.85042735042737" y="170.0" />
+      <point x="-13.538461538461547" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Log">
+      <point x="-10.0" y="-15.0" />
+      <point x="401.4916387959868" y="370.0" />
+      <point x="302.5" y="370.0" />
+      <point x="-18.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Vehicle" target="p4_group_8_repo.Actor">
+      <point x="-26.0" y="-15.0" />
+      <point x="644.3888888888889" y="170.0" />
+      <point x="521.9273504273505" y="170.0" />
+      <point x="13.538461538461547" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Frog">
+      <point x="3.3333333333333144" y="-15.0" />
+      <point x="414.82497212932003" y="360.0" />
+      <point x="424.5833333333333" y="360.0" />
+      <point x="-20.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Turtle">
+      <point x="30.0" y="-15.0" />
+      <point x="441.4916387959868" y="400.0" />
+      <point x="814.3888888888889" y="400.0" />
+      <point x="24.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.WetTurtle">
+      <point x="17.77777777777777" y="-15.0" />
+      <point x="462.3611111111111" y="270.0" />
+      <point x="508.3888888888889" y="270.0" />
+      <point x="-30.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Turtle" target="p4_group_8_repo.Actor">
+      <point x="24.000000000000057" y="-15.0" />
+      <point x="814.3888888888889" y="140.0" />
+      <point x="542.2350427350427" y="140.0" />
+      <point x="33.84615384615387" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.BackgroundImage">
+      <point x="-23.33333333333337" y="-15.0" />
+      <point x="388.1583054626534" y="390.0" />
+      <point x="166.0" y="390.0" />
+      <point x="-42.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9" x="394.52380952380963" y="169.75191475191474" />
+  <SelectedNodes>
+    <node>p4_group_8_repo.World</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
