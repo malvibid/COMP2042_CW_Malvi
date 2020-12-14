@@ -31,7 +31,10 @@ public class Player extends Actor {
 	int carD = 0;
 	double w = 800;
 	ArrayList<End> inter = new ArrayList<End>();
-	public Player(String imageLink) {
+
+	static Player frog = null;
+
+	private Player(String imageLink) {
 
 		setImage(new Image(imageLink, imgSize, imgSize, true, true));
 		setX(300);
@@ -130,6 +133,15 @@ public class Player extends Actor {
 			}
 			
 		});
+	}
+
+	public static Player getInstance(){
+
+		if(frog == null){
+			frog = new Player("file:src/main/resources/p4_group_8_repo/assets/froggerUp.png");
+		}
+
+		return frog;
 	}
 	
 	@Override

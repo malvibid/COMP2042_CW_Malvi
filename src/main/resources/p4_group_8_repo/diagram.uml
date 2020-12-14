@@ -3,177 +3,182 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="404.5833333333333" y="310.0">p4_group_8_repo.Frog</node>
-    <node x="376.5" y="200.0">p4_group_8_repo.End</node>
-    <node x="371.4916387959868" y="430.0">p4_group_8_repo.Main</node>
-    <node x="618.3888888888889" y="200.0">p4_group_8_repo.Vehicle</node>
-    <node x="442.3888888888889" y="0.0">p4_group_8_repo.World</node>
-    <node x="0.0" y="310.0">p4_group_8_repo.MyStage</node>
-    <node x="124.0" y="310.0">p4_group_8_repo.BackgroundImage</node>
-    <node x="464.3888888888889" y="80.0">p4_group_8_repo.Actor</node>
-    <node x="284.5" y="200.0">p4_group_8_repo.Log</node>
-    <node x="478.3888888888889" y="200.0">p4_group_8_repo.WetTurtle</node>
-    <node x="742.3888888888889" y="200.0">p4_group_8_repo.Turtle</node>
-    <node x="858.3888888888889" y="200.0">p4_group_8_repo.Digit</node>
+    <node x="696.6666666666666" y="200.0">p4_group_8_repo.End</node>
+    <node x="0.0" y="80.0">p4_group_8_repo.MyStage</node>
+    <node x="561.0" y="200.0">p4_group_8_repo.Vehicle</node>
+    <node x="366.1293199554069" y="420.0">p4_group_8_repo.Controllers.GamePlayController</node>
+    <node x="237.0" y="495.0">p4_group_8_repo.Views</node>
+    <node x="543.0" y="80.0">p4_group_8_repo.Actor</node>
+    <node x="788.6666666666666" y="200.0">p4_group_8_repo.Log</node>
+    <node x="305.0" y="200.0">p4_group_8_repo.Turtle</node>
+    <node x="197.0" y="200.0">p4_group_8_repo.Digit</node>
+    <node x="56.0" y="495.0">p4_group_8_repo.Main</node>
+    <node x="521.0" y="0.0">p4_group_8_repo.World</node>
+    <node x="-3.3333333333333144" y="548.3333333333334">p4_group_8_repo.Controllers.MainMenuController</node>
+    <node x="62.5" y="310.0">p4_group_8_repo.BackgroundImage</node>
+    <node x="649.9166666666666" y="310.0">p4_group_8_repo.Player</node>
+    <node x="421.0" y="200.0">p4_group_8_repo.WetTurtle</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.End">
-      <point x="-26.66666666666663" y="-15.0" />
-      <point x="417.9166666666667" y="270.0" />
-      <point x="403.5" y="270.0" />
-      <point x="-9.0" y="15.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.MyStage">
+      <point x="-87.27272727272714" y="-15.0" />
+      <point x="374.8565926826798" y="400.0" />
+      <point x="52.0" y="400.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.Actor" target="p4_group_8_repo.World">
       <point x="-22.0" y="-15.0" />
       <point x="0.0" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Vehicle">
-      <point x="23.333333333333314" y="-15.0" />
-      <point x="434.82497212932003" y="390.0" />
-      <point x="696.3888888888889" y="390.0" />
-      <point x="26.0" y="15.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.End">
+      <point x="69.81818181818187" y="-15.0" />
+      <point x="531.9475017735888" y="390.0" />
+      <point x="780.0676497415628" y="390.0" />
+      <point x="780.0676497415628" y="280.0" />
+      <point x="759.6666666666666" y="280.0" />
+      <point x="27.0" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.MyStage">
-      <point x="-36.666666666666686" y="-15.0" />
-      <point x="374.82497212932003" y="410.0" />
-      <point x="26.0" y="410.0" />
-      <point x="-26.0" y="15.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.Digit">
+      <point x="-34.90909090909082" y="-15.0" />
+      <point x="427.2202290463161" y="370.0" />
+      <point x="241.0" y="370.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.End">
+      <point x="10.666666666666686" y="-15.0" />
+      <point x="708.5833333333334" y="290.0" />
+      <point x="705.6666666666666" y="290.0" />
+      <point x="-27.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Controllers.MainMenuController" target="p4_group_8_repo.Main">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.WetTurtle" target="p4_group_8_repo.Actor">
       <point x="30.0" y="-15.0" />
-      <point x="568.3888888888889" y="180.0" />
-      <point x="515.1581196581196" y="180.0" />
-      <point x="6.769230769230774" y="15.0" />
+      <point x="511.0" y="180.0" />
+      <point x="580.2307692307692" y="180.0" />
+      <point x="-6.769230769230774" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.BackgroundImage" target="p4_group_8_repo.Actor">
       <point x="0.0" y="-15.0" />
-      <point x="208.0" y="130.0" />
-      <point x="467.77350427350433" y="130.0" />
+      <point x="146.5" y="130.0" />
+      <point x="546.3846153846154" y="130.0" />
       <point x="-40.615384615384585" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.End">
-      <point x="-3.3333333333333712" y="-15.0" />
-      <point x="408.1583054626534" y="360.0" />
-      <point x="370.9216833890748" y="360.0" />
-      <point x="370.9216833890748" y="290.0" />
-      <point x="385.5" y="290.0" />
-      <point x="-27.0" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.World" target="p4_group_8_repo.Actor">
       <point x="29.333333333333314" y="15.0" />
-      <point x="515.7222222222222" y="55.0" />
-      <point x="530.3888888888889" y="55.0" />
+      <point x="594.3333333333333" y="55.0" />
+      <point x="609.0" y="55.0" />
       <point x="22.0" y="-15.0" />
     </edge>
     <edge source="p4_group_8_repo.MyStage" target="p4_group_8_repo.World">
       <point x="0.0" y="-15.0" />
       <point x="52.0" y="55.0" />
-      <point x="457.0555555555556" y="55.0" />
+      <point x="535.6666666666666" y="55.0" />
       <point x="-29.333333333333314" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.Digit" target="p4_group_8_repo.Actor">
       <point x="0.0" y="-15.0" />
-      <point x="902.3888888888889" y="130.0" />
-      <point x="549.0042735042736" y="130.0" />
-      <point x="40.61538461538464" y="15.0" />
+      <point x="241.0" y="140.0" />
+      <point x="553.1538461538461" y="140.0" />
+      <point x="-33.84615384615387" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Digit">
-      <point x="36.666666666666686" y="-15.0" />
-      <point x="448.1583054626534" y="410.0" />
-      <point x="902.3888888888889" y="410.0" />
-      <point x="0.0" y="15.0" />
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.Turtle">
+      <point x="-42.66666666666663" y="-15.0" />
+      <point x="655.25" y="290.0" />
+      <point x="377.0" y="290.0" />
+      <point x="24.0" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.WetTurtle">
-      <point x="16.666666666666686" y="-15.0" />
-      <point x="428.1583054626534" y="380.0" />
-      <point x="568.3888888888889" y="380.0" />
-      <point x="30.0" y="15.0" />
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.Actor">
+      <point x="0.0" y="-15.0" />
+      <point x="697.9166666666666" y="250.0" />
+      <point x="686.1666666666666" y="250.0" />
+      <point x="686.1666666666666" y="160.0" />
+      <point x="607.3076923076923" y="160.0" />
+      <point x="20.30769230769232" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Turtle">
-      <point x="35.55555555555554" y="-15.0" />
-      <point x="480.13888888888886" y="290.0" />
-      <point x="766.3888888888889" y="290.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.Vehicle">
+      <point x="17.454545454545553" y="-15.0" />
+      <point x="479.58386540995247" y="360.0" />
+      <point x="587.0" y="360.0" />
+      <point x="-26.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.Player">
+      <point x="34.90909090909099" y="-15.0" />
+      <point x="497.0384108644979" y="370.0" />
+      <point x="673.9166666666666" y="370.0" />
       <point x="-24.0" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.Log" target="p4_group_8_repo.Actor">
       <point x="18.0" y="-15.0" />
-      <point x="338.5" y="150.0" />
-      <point x="481.3119658119658" y="150.0" />
-      <point x="-27.076923076923094" y="15.0" />
+      <point x="842.6666666666666" y="130.0" />
+      <point x="627.6153846153845" y="130.0" />
+      <point x="40.61538461538464" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Vehicle">
-      <point x="26.666666666666686" y="-15.0" />
-      <point x="471.25" y="280.0" />
-      <point x="644.3888888888889" y="280.0" />
-      <point x="-26.0" y="15.0" />
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.Log">
+      <point x="42.666666666666686" y="-15.0" />
+      <point x="740.5833333333334" y="290.0" />
+      <point x="806.6666666666666" y="290.0" />
+      <point x="-18.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.Turtle">
+      <point x="-17.454545454545382" y="-15.0" />
+      <point x="444.67477450086153" y="360.0" />
+      <point x="329.0" y="360.0" />
+      <point x="-24.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.Vehicle">
+      <point x="-21.333333333333314" y="-15.0" />
+      <point x="676.5833333333334" y="270.0" />
+      <point x="639.0" y="270.0" />
+      <point x="26.0" y="15.0" />
     </edge>
     <edge source="p4_group_8_repo.End" target="p4_group_8_repo.Actor">
       <point x="0.0" y="-15.0" />
-      <point x="412.5" y="160.0" />
-      <point x="488.0811965811966" y="160.0" />
-      <point x="-20.30769230769232" y="15.0" />
+      <point x="732.6666666666666" y="150.0" />
+      <point x="614.0769230769231" y="150.0" />
+      <point x="27.076923076923094" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Log">
-      <point x="-35.55555555555554" y="-15.0" />
-      <point x="409.02777777777777" y="280.0" />
-      <point x="338.5" y="280.0" />
-      <point x="18.0" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.Actor">
-      <point x="0.0" y="-15.0" />
-      <point x="444.5833333333333" y="250.0" />
-      <point x="459.0" y="250.0" />
-      <point x="459.0" y="170.0" />
-      <point x="494.85042735042737" y="170.0" />
-      <point x="-13.538461538461547" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Log">
-      <point x="-10.0" y="-15.0" />
-      <point x="401.4916387959868" y="370.0" />
-      <point x="302.5" y="370.0" />
-      <point x="-18.0" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Vehicle" target="p4_group_8_repo.Actor">
-      <point x="-26.0" y="-15.0" />
-      <point x="644.3888888888889" y="170.0" />
-      <point x="521.9273504273505" y="170.0" />
-      <point x="13.538461538461547" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Frog">
-      <point x="3.3333333333333144" y="-15.0" />
-      <point x="414.82497212932003" y="360.0" />
-      <point x="424.5833333333333" y="360.0" />
-      <point x="-20.0" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.Turtle">
-      <point x="30.0" y="-15.0" />
-      <point x="441.4916387959868" y="400.0" />
-      <point x="814.3888888888889" y="400.0" />
-      <point x="24.0" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Frog" target="p4_group_8_repo.WetTurtle">
-      <point x="17.77777777777777" y="-15.0" />
-      <point x="462.3611111111111" y="270.0" />
-      <point x="508.3888888888889" y="270.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.WetTurtle">
+      <point x="5.6843418860808015E-14" y="-15.0" />
+      <point x="462.12931995540697" y="400.0" />
+      <point x="451.0" y="400.0" />
       <point x="-30.0" y="15.0" />
     </edge>
-    <edge source="p4_group_8_repo.Turtle" target="p4_group_8_repo.Actor">
-      <point x="24.000000000000057" y="-15.0" />
-      <point x="814.3888888888889" y="140.0" />
-      <point x="542.2350427350427" y="140.0" />
-      <point x="33.84615384615387" y="15.0" />
-    </edge>
-    <edge source="p4_group_8_repo.Main" target="p4_group_8_repo.BackgroundImage">
-      <point x="-23.33333333333337" y="-15.0" />
-      <point x="388.1583054626534" y="390.0" />
-      <point x="166.0" y="390.0" />
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.BackgroundImage">
+      <point x="-69.8181818181817" y="-15.0" />
+      <point x="392.3111381372252" y="390.0" />
+      <point x="104.5" y="390.0" />
       <point x="-42.0" y="15.0" />
     </edge>
+    <edge source="p4_group_8_repo.Vehicle" target="p4_group_8_repo.Actor">
+      <point x="-26.000000000000057" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Player" target="p4_group_8_repo.WetTurtle">
+      <point x="-31.999999999999943" y="-15.0" />
+      <point x="665.9166666666667" y="280.0" />
+      <point x="511.0" y="280.0" />
+      <point x="30.0" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Turtle" target="p4_group_8_repo.Actor">
+      <point x="24.0" y="-15.0" />
+      <point x="377.0" y="160.0" />
+      <point x="566.6923076923076" y="160.0" />
+      <point x="-20.30769230769232" y="15.0" />
+    </edge>
+    <edge source="p4_group_8_repo.Controllers.GamePlayController" target="p4_group_8_repo.Log">
+      <point x="87.27272727272731" y="-15.0" />
+      <point x="549.4020472281343" y="400.0" />
+      <point x="842.6666666666666" y="400.0" />
+      <point x="18.0" y="15.0" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.9" x="394.52380952380963" y="169.75191475191474" />
+  <settings layout="Hierarchic Group" zoom="0.9" x="395.00000000000034" y="301.6666666666669" />
   <SelectedNodes>
-    <node>p4_group_8_repo.World</node>
+    <node>p4_group_8_repo.Controllers.MainMenuController</node>
   </SelectedNodes>
   <Categories>
     <Category>Inner Classes</Category>

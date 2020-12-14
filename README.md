@@ -3,7 +3,7 @@
 * [ ] Tests with Junit
 * [ ] Refactor
 * [ ] MVC Design Pattern
-* [ ] Scene manager framework
+* [x] Scene manager framework
 * [ ] Levels (Factory Design Pattern)
 * [ ] Main menu
 * [ ] High score engine and file saving
@@ -28,6 +28,14 @@ Types of changes => Added, Changed, Removed, Fixed.
 * Renamed 'Obstacle.java' to 'Vehicle.java'.
 * Enabled Up, Down, Left, Right arrow keys along with A, W, S, D keys to control sprite.
 
+### [1.0.0]
+* As this is a single player game, only one instance of the player represented by 'frog' is required. Hence, changed 'Player' class to follow the Singleton design pattern.
+* Implemented Model, View, Controller (MVC) pattern. 'GamePlayController' is responsible for level object creation and instance of 'MyStage' (which is a custom scene) is created in 'GamePlayView.fxml'.
+* 'Main.java' is now only responsible for changing between different scenes in the application.
+* Changed project file structure and 'module-info.java' such that all .fxml files can be found from the resources' directory in the 'Views' folder and all controllers can be found in the 'Controllers' package. 
+* Added Main Menu. 
+* Added an exit confirmation box.
+
 # Screenshot of Game
 
-![Game Screenshot](src/main/resources/p4_group_8_repo/assets/arcade.png)
+![Game Screenshot](src/main/resources/p4_group_8_repo/Assets/arcade.png)
