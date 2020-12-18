@@ -5,155 +5,153 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import static p4_group_8_repo.Enums.FrogType.*;
+import static p4_group_8_repo.Controllers.GamePlayController.calculateColumn;
+import static p4_group_8_repo.Controllers.GamePlayController.calculateRow;
+import static p4_group_8_repo.ImageLoader.FROG_SPRITES;
 
 
 public class Player extends Actor {
-	Image imgW1;
-	Image imgA1;
-	Image imgS1;
-	Image imgD1;
-	Image imgW2;
-	Image imgA2;
-	Image imgS2;
-	Image imgD2;
+
+	public static final int SPRITE_WIDTH    = 40;
+	public static final int SPRITE_HEIGHT   = 40;
+
 	int points = 0;
 	int end = 0;
 	private boolean second = false;
 	boolean noMove = false;
-	double movement = 13.3333333*2;
-	double movementX = 10.666666*2;
+	int movement = 25;
 	int imgSize = 40;
 	boolean carDeath = false;
 	boolean waterDeath = false;
 	boolean stop = false;
 	boolean changeScore = false;
 	int carD = 0;
-	double w = 800;
+	double w = 640;
 	ArrayList<End> inter = new ArrayList<End>();
 
 	static Player frog = null;
 
-	private Player(String imageLink) {
+	private Player(Image imageName) {
 
-		setImage(new Image(imageLink, imgSize, imgSize, true, true));
-		setX(300);
-		setY(679.8+movement);
-		imgW1 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerUp.png", imgSize, imgSize, true, true);
-		imgA1 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerLeft.png", imgSize, imgSize, true, true);
-		imgS1 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerDown.png", imgSize, imgSize, true, true);
-		imgD1 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerRight.png", imgSize, imgSize, true, true);
-		imgW2 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerUpJump.png", imgSize, imgSize, true, true);
-		imgA2 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerLeftJump.png", imgSize, imgSize, true, true);
-		imgS2 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerDownJump.png", imgSize, imgSize, true, true);
-		imgD2 = new Image("file:src/main/resources/p4_group_8_repo/assets/froggerRightJump.png", imgSize, imgSize, true, true);
+
+		Image[] imageArray = GetImageFromSpriteSheet.getImage(8, SPRITE_WIDTH, SPRITE_HEIGHT, imageName);
+
+		setImage((Image) Array.get(imageArray, UP_IDLE.ordinal()));
+		respawn();
 
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event){
 				if (noMove) {
-					
+
 				}
 				else {
-				if (second) {
-					if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
-		                move(0, -movement);
-		                changeScore = false;
-		                setImage(imgW1);
-		                second = false;
-		            }
-		            else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
-		            	 move(-movementX, 0);
-		            	 setImage(imgA1);
-		            	 second = false;
-		            }
-		            else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
-		            	 move(0, movement);
-		            	 setImage(imgS1);
-		            	 second = false;
-		            }
-		            else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
-		            	 move(movementX, 0);
-		            	 setImage(imgD1);
-		            	 second = false;
-		            }
+					if (second) {
+						if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
+							move(0, -movement);
+							changeScore = false;
+							setImage((Image) Array.get(imageArray, UP_IDLE.ordinal()));
+							second = false;
+						}
+						else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
+							move(-movement, 0);
+							setImage((Image) Array.get(imageArray, LEFT_IDLE.ordinal()));
+							second = false;
+						}
+						else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
+							move(0, -movement);
+							setImage((Image) Array.get(imageArray, DOWN_IDLE.ordinal()));
+							second = false;
+						}
+						else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
+							move(movement, 0);
+							setImage((Image) Array.get(imageArray, RIGHT_IDLE.ordinal()));
+							second = false;
+						}
+					}
+					else if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
+						move(0, -movement);
+						setImage((Image) Array.get(imageArray, UP_JUMP.ordinal()));
+						second = true;
+					}
+					else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
+						move(-movement, 0);
+						setImage((Image) Array.get(imageArray, LEFT_JUMP.ordinal()));
+						second = true;
+					}
+					else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
+						move(0, movement);
+						setImage((Image) Array.get(imageArray, DOWN_JUMP.ordinal()));
+						second = true;
+					}
+					else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
+						move(movement, 0);
+						setImage((Image) Array.get(imageArray, RIGHT_JUMP.ordinal()));
+						second = true;
+					}
 				}
-				else if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
-	                move(0, -movement);
-	                setImage(imgW2);
-	                second = true;
-	            }
-	            else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
-	            	 move(-movementX, 0);
-	            	 setImage(imgA2);
-	            	 second = true;
-	            }
-	            else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
-	            	 move(0, movement);
-	            	 setImage(imgS2);
-	            	 second = true;
-	            }
-	            else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
-	            	 move(movementX, 0);
-	            	 setImage(imgD2);
-	            	 second = true;
-	            }
-	        }
 			}
-		});	
+		});
 		setOnKeyReleased(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event) {
 				if (noMove) {}
 				else {
-				if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
-					if (getY() < w) {
-						changeScore = true;
-						w = getY();
-						points+=10;
+					if (event.getCode() == KeyCode.W || event.getCode() == KeyCode.UP) {
+						if (getY() < w) {
+							changeScore = true;
+							w = getY();
+							points+=10;
+						}
+						move(0, -movement);
+						setImage((Image) Array.get(imageArray, UP_IDLE.ordinal()));
+						second = false;
 					}
-	                move(0, -movement);
-	                setImage(imgW1);
-	                second = false;
-	            }
-	            else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
-	            	 move(-movementX, 0);
-	            	 setImage(imgA1);
-	            	 second = false;
-	            }
-	            else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
-	            	 move(0, movement);
-	            	 setImage(imgS1);
-	            	 second = false;
-	            }
-	            else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
-	            	 move(movementX, 0);
-	            	 setImage(imgD1);
-	            	 second = false;
-	            }
-	        }
+					else if (event.getCode() == KeyCode.A || event.getCode() == KeyCode.LEFT) {
+						move(-movement, 0);
+						setImage((Image) Array.get(imageArray, LEFT_IDLE.ordinal()));
+						second = false;
+					}
+					else if (event.getCode() == KeyCode.S || event.getCode() == KeyCode.DOWN) {
+						move(0, movement);
+						setImage((Image) Array.get(imageArray, DOWN_IDLE.ordinal()));
+						second = false;
+					}
+					else if (event.getCode() == KeyCode.D || event.getCode() == KeyCode.RIGHT) {
+						move(movement, 0);
+						setImage((Image) Array.get(imageArray, RIGHT_IDLE.ordinal()));
+						second = false;
+					}
+				}
 			}
-			
+
 		});
 	}
 
 	public static Player getInstance(){
 
 		if(frog == null){
-			frog = new Player("file:src/main/resources/p4_group_8_repo/assets/froggerUp.png");
+			frog = new Player(FROG_SPRITES);
 		}
 
 		return frog;
 	}
-	
+
 	@Override
 	public void act(long now) {
-		int bounds = 0;
-		if (getY()<0 || getY()>734) {
-			setX(300);
-			setY(679.8+movement);
+		if (getY()<0 || getY()>this.getScene().getHeight()) {
+			respawn();
 		}
-		if (getX()<0) {
-			move(movement*2, 0);
+
+		if (getX() < 0) {
+			move(movement *2, 0);
 		}
+
+		if (getX() > 600) {
+			move(-movement *2, 0);
+		}
+
 		if (carDeath) {
 			noMove = true;
 			if ((now)% 11 ==0) {
@@ -169,8 +167,7 @@ public class Player extends Actor {
 				setImage(new Image("file:src/main/resources/p4_group_8_repo/assets/cardeath3.png", imgSize, imgSize, true, true));
 			}
 			if (carD == 4) {
-				setX(300);
-				setY(679.8+movement);
+				respawn();
 				carDeath = false;
 				carD = 0;
 				setImage(new Image("file:src/main/resources/p4_group_8_repo/assets/froggerUp.png", imgSize, imgSize, true, true));
@@ -180,7 +177,7 @@ public class Player extends Actor {
 					changeScore = true;
 				}
 			}
-			
+
 		}
 		if (waterDeath) {
 			noMove = true;
@@ -200,8 +197,7 @@ public class Player extends Actor {
 				setImage(new Image("file:src/main/resources/p4_group_8_repo/assets/waterdeath4.png", imgSize,imgSize , true, true));
 			}
 			if (carD == 5) {
-				setX(300);
-				setY(679.8+movement);
+				respawn();
 				waterDeath = false;
 				carD = 0;
 				setImage(new Image("file:src/main/resources/p4_group_8_repo/assets/froggerUp.png", imgSize, imgSize, true, true));
@@ -211,16 +207,14 @@ public class Player extends Actor {
 					changeScore = true;
 				}
 			}
-			
+
 		}
-		
-		if (getX()>600) {
-			move(-movement*2, 0);
-		}
+
 		if (getIntersectingObjects(Vehicle.class).size() >= 1) {
 			carDeath = true;
 		}
-		if (getX() == 240 && getY() == 82) {
+		//stop frog from jumping after home end is reached. getX() == 240 && getY() == 82
+		if (getY() == calculateRow(2)) {
 			stop = true;
 		}
 		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {
@@ -250,31 +244,34 @@ public class Player extends Actor {
 			w=800;
 			getIntersectingObjects(End.class).get(0).setEnd();
 			end++;
-			setX(300);
-			setY(679.8+movement);
+			respawn();
 		}
-		else if (getY()<413){
+		else if (getY()<320){
 			waterDeath = true;
-			//setX(300);
-			//setY(679.8+movement);
 		}
 	}
+
+	private void respawn() {
+		setX(calculateColumn(6));
+		setY(calculateRow(14) + 6);
+//		setY(calculateRow(8) + 6);
+	}
+
 	public boolean getStop() {
 		return end==5;
 	}
-	
+
 	public int getPoints() {
 		return points;
 	}
-	
+
 	public boolean changeScore() {
 		if (changeScore) {
 			changeScore = false;
 			return true;
 		}
 		return false;
-		
+
 	}
-	
 
 }

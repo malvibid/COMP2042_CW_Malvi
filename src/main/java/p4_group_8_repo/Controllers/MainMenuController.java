@@ -8,6 +8,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import p4_group_8_repo.ImageLoader;
 import p4_group_8_repo.Main;
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ import java.util.Optional;
 
 public class MainMenuController {
 
+    ImageLoader imageLoader = new ImageLoader();
 
     @FXML
     private AnchorPane anchorPane; //with the help of this Anchor Pane we can fetch the stage object inside the controller.

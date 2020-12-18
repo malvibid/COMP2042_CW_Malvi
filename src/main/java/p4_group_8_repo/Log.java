@@ -4,6 +4,10 @@ import javafx.scene.image.Image;
 
 public class Log extends Actor {
 
+	public static final int LOG_1_WIDTH = 95;
+	public static final int LOG_2_WIDTH = 196;
+	public static final int LOG_3_WIDTH = 127;
+
 	private double speed;
 	@Override
 	public void act(long now) {
@@ -13,14 +17,14 @@ public class Log extends Actor {
 		if (getX()<-300 && speed<0)
 			setX(700);
 	}
-	
-	public Log(String imageLink, int size, int xpos, int ypos, double s) {
-		setImage(new Image(imageLink, size,size, true, true));
+
+	public Log(Image imageLink, int xpos, int ypos, double s) {
+		setImage(imageLink);
 		setX(xpos);
 		setY(ypos);
 		speed = s;
-		
 	}
+
 	public boolean getLeft() {
 		return speed < 0;
 	}
