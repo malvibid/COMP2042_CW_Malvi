@@ -1,6 +1,11 @@
 package p4_group_8_repo;
 
 import javafx.scene.image.Image;
+import p4_group_8_repo.Controllers.MainMenuController;
+
+/***
+ * This class loads all the images into the game prior to starting game play. This prevents lags. Also provides easy access to all images.
+ */
 
 public class ImageLoader{
 
@@ -27,10 +32,19 @@ public class ImageLoader{
     public static Image SINGLE_CAR;
 
 
+    /**
+     * Helper method to get the resources from file directory..
+     * @param imageName name of image
+     * @return image
+     */
     public static Image getLink(String imageName){
-        return new Image(ImageLoader.class.getResource("/p4_group_8_repo/NewAssets/"+ imageName).toString());
+        return new Image(ImageLoader.class.getResource("/p4_group_8_repo/Assets/"+ imageName).toString());
     }
 
+    /**
+     * The ImageLoader constructor will load the images specified in it. The image loader is triggered from the main menu.
+     * @see MainMenuController
+     */
     public ImageLoader(){
         ALLIGATOR_SPRITES = getLink("alligator_sprites.png");
         BOTTOM_GROUND = getLink("bottom_ground.png");
@@ -52,7 +66,6 @@ public class ImageLoader{
         TURTLE_2GREEN_SPRITES = getLink("turtle_2green_sprites.png");
         TURTLE_3GREEN_SPRITES = getLink("turtle_3green_sprites.png");
         WATER_DEATH_SPRITES = getLink("water_death_sprites.png");
-        SINGLE_CAR = getLink("car1right.png");
 
 
     }

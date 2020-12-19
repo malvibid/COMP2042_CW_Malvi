@@ -6,6 +6,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+/**
+ * This class is responsible for the green turtles which can sink inside the water.
+ * Like the red turtles, these are of two types.
+ */
 public class WetTurtle extends Actor{
 	private Image imageName;
 	SpriteAnimation animationOf3GreenTurtles;
@@ -20,6 +24,13 @@ public class WetTurtle extends Actor{
 	private int speed;
 	boolean sunk = false;
 
+	/**
+	 * This constructor instantiates the turtles and configures it's animation.
+	 * @param imageName Image
+	 * @param xpos X position
+	 * @param ypos Y position
+	 * @param s speed
+	 */
 	public WetTurtle(Image imageName, int xpos, int ypos, int s) {
 		this.imageName = imageName;
 
@@ -36,6 +47,10 @@ public class WetTurtle extends Actor{
 		animationOf3GreenTurtles.play();
 	}
 
+	/**
+	 * Apart from moving the sprites, the act method will also check for whether the turtle has sunk or not.
+	 * @param now current time
+	 */
 	@Override
 	public void act(long now) {
 
@@ -51,6 +66,10 @@ public class WetTurtle extends Actor{
 			setX(600);
 	}
 
+	/**
+	 * Checks whether turtle is above water or has sunk.
+	 * @return true if turtle is under water.
+	 */
 	public boolean isSunk() {
 		return sunk;
 	}

@@ -14,6 +14,10 @@ import p4_group_8_repo.Main;
 import java.io.IOException;
 import java.util.Optional;
 
+/**
+ * This class tells the Main class which scene to load depending on the button pressed in the main menu.
+ * Image Loader object is instantiated from here to load all the images in the game.
+ */
 public class MainMenuController {
 
     ImageLoader imageLoader = new ImageLoader();
@@ -21,11 +25,36 @@ public class MainMenuController {
     @FXML
     private AnchorPane anchorPane; //with the help of this Anchor Pane we can fetch the stage object inside the controller.
 
-    //When play button is clicked on in the main menu, then change scene to play game, in startPlay method in Main class.
+
+    /**
+     * If Play Game button pressed set scene to Game Play.
+     * @throws IOException -
+     */
     public void playGame() throws IOException {
         Main.setRoot("GamePlayView");
     }
 
+    /**
+     * If Highscore button pressed set scene to High Score Board.
+     * @throws IOException -
+     */
+    public void highScore() throws IOException {
+        Main.setRoot("HighScoreBoardView");
+    }
+
+    /**
+     * If Instructions button pressed set scene to Instructions Board.
+     * @throws IOException -
+     */
+    public void instructions() throws IOException {
+        Main.setRoot("InstructionsView");
+    }
+
+
+    /**
+     * If Exit button pressed, confirm exit; if 'Ok' selected then exit, if 'Cancel' selected then close dialog box and stay in Main Menu.
+     * @throws IOException -
+     */
     public void exitGame(){
 
         Stage stage = (Stage) anchorPane.getScene().getWindow();

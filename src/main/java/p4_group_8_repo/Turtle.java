@@ -6,6 +6,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+/**
+ * This class is responsible for the creation of the Red Turtles. I have added two types of red turtles:
+ * 1) Two joint turtles,
+ * 2) Three joint turtles.
+ */
 public class Turtle extends Actor{
 
 	private static final int COLUMNS  =   3;
@@ -18,6 +23,10 @@ public class Turtle extends Actor{
 	private int speed;
 	private Image imageName;
 
+	/**
+	 * This method is reponsible for moving the turtles across and around the screen.
+	 * @param now current time
+	 */
 	@Override
 	public void act(long now) {
 
@@ -29,6 +38,15 @@ public class Turtle extends Actor{
 
 	}
 
+	/**
+	 * This constructor is responsible for instantiating the turtle object.
+	 * It also configures the animation of the turtle. By setting up the image view and view port.
+	 * The animation is set to run indefinitely.
+	 * @param imageName - Name of image file.
+	 * @param xpos - X position.
+	 * @param ypos - Y position.
+	 * @param s - speed.
+	 */
 	public Turtle(Image imageName, int xpos, int ypos, int s) {
 		this.imageName = imageName;
 

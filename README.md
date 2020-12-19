@@ -1,19 +1,19 @@
 # Task List
 * [x] Setup a Maven-JavaFX project
-* [ ] Tests with Junit
-* [ ] Refactor (sort Magic Numbers, reduce If-Conditions, follow SOLID and DRY principles)
-* [ ] MVC Design Pattern
+* [x] Tests with Junit
+* [x] Refactor (sort Magic Numbers, reduce If-Conditions, follow SOLID and DRY principles)
+* [x] MVC Design Pattern
 * [x] Scene manager framework
 * [ ] Levels (Factory Design Pattern)
-* [ ] Main menu
-* [ ] High score engine and file saving
+* [x] Main menu
+* [x] High score engine and file saving
 * [x] Improve graphics
-* [ ] Final refactor/clean-up
-* [ ] Comments and Javadocs
-* [ ] README file (change log)
-* [ ] Version control with Git and Github.  
-* [ ] Class diagram
-* [ ] Video presentation
+* [x] Final refactor/clean-up
+* [x] Comments and Javadocs
+* [x] README file (change log)
+* [x] Version control with Git and Github.  
+* [x] Class diagram
+* [x] Video presentation
 
 
 # Change Log
@@ -46,6 +46,15 @@ Types of changes => Added, Changed, Removed, Fixed.
 * Added 'GetImageFromSpriteSheet' class to retrieve a particular frame from sprite sheet using JavaFXs pixel reader and writer methods.
 * Added new types of objects (e.g. 5 types of Vehicles, alligators, bugs) and sprites to follow the original game design by Konami. 
 * Added 'Sprite Animation' class to manage sprite sheet animations (e.g. car/water death and turtles animations).
+
+### [2.1.0]
+* Added high score functionality and saving high score in a file.
+* Added high score and help main menu options.
+* Reorganised Image Assets.
+* Added simple JUnit tests.
+* Added javadoc comments and generated javadoc.
+* Git commit history.
+* Generated class diagram.
 
 
 

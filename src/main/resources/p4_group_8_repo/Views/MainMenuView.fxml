@@ -10,7 +10,7 @@
     <children>
         <ImageView fitHeight="800.0" fitWidth="600.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../NewAssets/menu_background.png" />
+                <Image url="@../Assets/menu_background.png" />
             </image>
         </ImageView>
         <StackPane layoutX="219.0" layoutY="470.0" prefHeight="277.0" prefWidth="164.0" AnchorPane.topAnchor="470.0">
@@ -20,12 +20,12 @@
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="Highscore" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="180.0" text="HIGHSCORE" translateY="-50.0">
+                <Button fx:id="Highscore" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" onAction="#highScore" prefHeight="20.0" prefWidth="180.0" text="HIGHSCORE" translateY="-50.0">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="Help" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="180.0" text="HELP" translateY="10.0">
+                <Button fx:id="Help" layoutX="10.0" layoutY="123.0" mnemonicParsing="false" onAction="#instructions" prefHeight="20.0" prefWidth="180.0" text="HELP" translateY="10.0">
                     <font>
                         <Font size="20.0" />
                     </font>
