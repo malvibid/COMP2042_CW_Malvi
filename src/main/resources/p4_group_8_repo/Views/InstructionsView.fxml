@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p4_group_8_repo.Controllers.InstructionsController">
+   <children>
+      <ImageView fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/instructions.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mainMenu" layoutX="473.0" layoutY="715.0" mnemonicParsing="false" onAction="#goToMainMenu" text="Main Menu" />
+   </children>
+</AnchorPane>
